@@ -59,7 +59,7 @@ batsize = 32
 learning_rate = 0.0002
 nr_channels = 2
 nr_classes = 114 # The amount of possible locations
-max_epochs = 1 # Should be 50 for actual runs
+max_epochs = 50 # Should be 50 for actual runs
 
 # track hyperparameters and run metadata
 wandb.config = {
