@@ -65,7 +65,7 @@ device = torch.device("cuda:0" if use_cuda else "cpu")
 torch.backends.cudnn.benchmark = True
 
 # Parameters
-params_test = {'batch_size': 100,
+params_test = {'batch_size': 32,
               'shuffle': False}
 
 # Define parameters.

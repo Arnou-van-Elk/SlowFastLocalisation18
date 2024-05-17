@@ -1,0 +1,84 @@
+[INFO]: Epoch 1 of 1
+Training
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊| 1424/1425 [02:28<00:00,  7.78it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1425/1425 [02:29<00:00,  9.56it/s]
+  0%|                                                                                                                                                                                                   | 0/357 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "c:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\ResNet18_Final-main\train_resnet_slowfast.py", line 117, in <module>
+    valid_epoch_loss, valid_epoch_acc, confusion_matrices = validate(
+  File "c:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\ResNet18_Final-main\training_utils_resnet_slowfast.py", line 115, in validate
+    labels = labels.to(device)  # Move labels tensor to device
+AttributeError: 'tuple' object has no attribute 'to'

@@ -1,0 +1,429 @@
+2024-05-16 23:52:58,338 INFO    StreamThr :23580 [internal.py:wandb_internal():86] W&B internal server running at pid: 23580, started at: 2024-05-16 23:52:58.337288
+2024-05-16 23:52:58,340 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status
+2024-05-16 23:52:58,346 INFO    WriterThread:23580 [datastore.py:open_for_write():87] open: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\run-he9skdv4.wandb
+2024-05-16 23:52:58,348 DEBUG   SenderThread:23580 [sender.py:send():379] send: header
+2024-05-16 23:52:58,426 DEBUG   SenderThread:23580 [sender.py:send():379] send: run
+2024-05-16 23:52:59,201 INFO    SenderThread:23580 [dir_watcher.py:__init__():211] watching files in: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files
+2024-05-16 23:52:59,201 INFO    SenderThread:23580 [sender.py:_start_run_threads():1124] run started: he9skdv4 with start time 1715896378.337287
+2024-05-16 23:52:59,214 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: check_version
+2024-05-16 23:52:59,215 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: check_version
+2024-05-16 23:52:59,737 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: run_start
+2024-05-16 23:52:59,776 DEBUG   HandlerThread:23580 [system_info.py:__init__():26] System info init
+2024-05-16 23:52:59,776 DEBUG   HandlerThread:23580 [system_info.py:__init__():41] System info init done
+2024-05-16 23:52:59,776 INFO    HandlerThread:23580 [system_monitor.py:start():194] Starting system monitor
+2024-05-16 23:52:59,777 INFO    SystemMonitor:23580 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-16 23:52:59,777 INFO    HandlerThread:23580 [system_monitor.py:probe():214] Collecting system info
+2024-05-16 23:52:59,783 INFO    SystemMonitor:23580 [interfaces.py:start():190] Started cpu monitoring
+2024-05-16 23:52:59,784 INFO    SystemMonitor:23580 [interfaces.py:start():190] Started disk monitoring
+2024-05-16 23:52:59,785 INFO    SystemMonitor:23580 [interfaces.py:start():190] Started gpu monitoring
+2024-05-16 23:52:59,786 INFO    SystemMonitor:23580 [interfaces.py:start():190] Started memory monitoring
+2024-05-16 23:52:59,794 INFO    SystemMonitor:23580 [interfaces.py:start():190] Started network monitoring
+2024-05-16 23:52:59,805 DEBUG   HandlerThread:23580 [system_info.py:probe():150] Probing system
+2024-05-16 23:52:59,809 DEBUG   HandlerThread:23580 [system_info.py:_probe_git():135] Probing git
+2024-05-16 23:52:59,935 DEBUG   HandlerThread:23580 [system_info.py:_probe_git():143] Probing git done
+2024-05-16 23:52:59,935 DEBUG   HandlerThread:23580 [system_info.py:probe():198] Probing system done
+2024-05-16 23:52:59,936 DEBUG   HandlerThread:23580 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.9.17', 'heartbeatAt': '2024-05-16T21:52:59.805370', 'startedAt': '2024-05-16T21:52:58.322232', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\arnou\\OneDrive\\Documents\\GitHub\\SlowFastLocalisation18\\SlowFastResNet18\\ResNet18_Final-main\\train_resnet_slowfast.py', 'codePathLocal': 'ResNet18_Final-main\\train_resnet_slowfast.py', 'codePath': 'SlowFastResNet18\\ResNet18_Final-main\\train_resnet_slowfast.py', 'git': {'remote': 'https://github.com/Arnou-van-Elk/SlowFastLocalisation18.git', 'commit': 'ed405944552359f3f3cb956ce015ca7d4b53b1ef'}, 'email': 'Arnoutve@gmail.com', 'root': 'C:/Users/arnou/OneDrive/Documents/GitHub/SlowFastLocalisation18', 'host': 'MSI', 'username': 'arnou', 'executable': 'C:\\Users\\arnou\\Anaconda\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 2592.0, 'min': 0.0, 'max': 2592.0}, 'cpu_freq_per_core': [{'current': 2592.0, 'min': 0.0, 'max': 2592.0}], 'disk': {'/': {'total': 931.7558555603027, 'used': 624.388053894043}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 15.825950622558594}}
+2024-05-16 23:52:59,936 INFO    HandlerThread:23580 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-16 23:52:59,936 INFO    HandlerThread:23580 [system_monitor.py:probe():227] Publishing system info
+2024-05-16 23:52:59,936 DEBUG   HandlerThread:23580 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-16 23:53:00,212 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\conda-environment.yaml
+2024-05-16 23:53:14,952 ERROR   HandlerThread:23580 [system_info.py:_save_conda():221] Error saving conda packages: Command '['conda', 'env', 'export']' timed out after 15 seconds
+Traceback (most recent call last):
+  File "C:\Users\arnou\Anaconda\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 214, in _save_conda
+    subprocess.call(
+  File "C:\Users\arnou\Anaconda\lib\subprocess.py", line 351, in call
+    return p.wait(timeout=timeout)
+  File "C:\Users\arnou\Anaconda\lib\subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "C:\Users\arnou\Anaconda\lib\subprocess.py", line 1489, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['conda', 'env', 'export']' timed out after 15 seconds
+2024-05-16 23:53:14,954 DEBUG   HandlerThread:23580 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-16 23:53:14,955 INFO    HandlerThread:23580 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-16 23:53:14,962 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:14,962 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-16 23:53:14,962 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:14,963 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-16 23:53:14,963 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:14,963 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-16 23:53:14,964 DEBUG   SenderThread:23580 [sender.py:send():379] send: files
+2024-05-16 23:53:14,964 INFO    SenderThread:23580 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-05-16 23:53:15,367 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\wandb-metadata.json
+2024-05-16 23:53:15,500 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-16 23:53:15,500 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:53:15,500 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:53:15,501 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: python_packages
+2024-05-16 23:53:15,504 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:53:15,729 DEBUG   SenderThread:23580 [sender.py:send():379] send: telemetry
+2024-05-16 23:53:15,730 DEBUG   SenderThread:23580 [sender.py:send():379] send: telemetry
+2024-05-16 23:53:15,730 DEBUG   SenderThread:23580 [sender.py:send():379] send: run
+2024-05-16 23:53:15,887 INFO    SenderThread:23580 [sender.py:send_run():997] updated run: he9skdv4
+2024-05-16 23:53:15,970 INFO    wandb-upload_0:23580 [upload_job.py:push():131] Uploaded file C:\Users\arnou\AppData\Local\Temp\tmp_f4dtr3owandb\r5qja5m5-wandb-metadata.json
+2024-05-16 23:53:16,374 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\config.yaml
+2024-05-16 23:53:16,375 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\requirements.txt
+2024-05-16 23:53:16,772 DEBUG   SenderThread:23580 [sender.py:send():379] send: telemetry
+2024-05-16 23:53:16,971 DEBUG   SenderThread:23580 [sender.py:send():379] send: telemetry
+2024-05-16 23:53:18,392 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:18,963 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:20,412 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:22,439 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:23,976 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:24,466 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:26,493 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:28,518 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:29,081 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:29,532 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\config.yaml
+2024-05-16 23:53:30,501 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:53:30,502 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:53:30,503 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:53:30,547 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:32,569 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:34,288 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:34,593 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:36,618 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:38,643 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:39,407 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:40,664 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:42,692 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:44,541 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:44,716 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:45,513 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:53:45,514 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:53:45,515 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:53:46,739 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:48,751 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:49,578 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:50,771 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:52,798 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:54,653 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:54,826 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:56,849 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:58,865 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:53:59,674 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:53:59,797 DEBUG   SystemMonitor:23580 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-16 23:53:59,799 DEBUG   SenderThread:23580 [sender.py:send():379] send: stats
+2024-05-16 23:54:00,515 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:54:00,516 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:54:00,530 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:54:00,885 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:02,902 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:04,739 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:04,914 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:06,937 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:08,963 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:09,848 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:10,971 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:12,995 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:14,935 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:15,014 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:15,515 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:54:15,517 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:54:15,545 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:54:17,041 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:19,069 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:19,964 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:21,084 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:23,112 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:24,980 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:25,138 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:27,164 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:29,189 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:29,815 DEBUG   SenderThread:23580 [sender.py:send():379] send: stats
+2024-05-16 23:54:30,036 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:30,530 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:54:30,531 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:54:30,561 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:54:31,217 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:33,235 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:35,068 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:35,260 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:37,288 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:39,314 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:40,187 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:41,327 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:43,349 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:45,309 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:45,375 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:45,531 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:54:45,532 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:54:45,577 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:54:47,404 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:49,432 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:50,393 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:51,458 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:53,485 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:55,426 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:54:55,500 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:57,526 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:59,552 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:54:59,820 DEBUG   SenderThread:23580 [sender.py:send():379] send: stats
+2024-05-16 23:55:00,537 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:55:00,538 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:00,538 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:55:00,583 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:55:01,570 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:03,596 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:05,622 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:05,634 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:07,651 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:09,674 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:10,781 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:11,686 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:13,718 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:15,539 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:55:15,540 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:55:15,571 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:55:15,741 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:15,783 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:17,765 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:19,792 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:20,837 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:21,816 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:23,844 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:25,867 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:25,998 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:26,287 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-16 23:55:26,290 DEBUG   SenderThread:23580 [sender.py:send():379] send: history
+2024-05-16 23:55:26,291 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: summary_record
+2024-05-16 23:55:26,292 INFO    SenderThread:23580 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-16 23:55:26,894 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:26,897 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\wandb-summary.json
+2024-05-16 23:55:27,903 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:28,919 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:29,828 DEBUG   SenderThread:23580 [sender.py:send():379] send: stats
+2024-05-16 23:55:29,930 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:30,549 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:55:30,549 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:55:30,580 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:55:30,950 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:30,999 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:31,951 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:32,981 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:34,012 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:35,032 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:35,999 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:36,041 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:37,069 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:38,092 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:39,102 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:40,113 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:41,012 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:41,135 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:42,162 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:43,170 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:44,185 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:45,208 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:45,546 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:55:45,546 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:55:45,595 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:55:46,041 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:46,213 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:47,275 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:48,297 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:49,331 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:50,371 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:51,083 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:51,431 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:53,517 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:55,539 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:56,085 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:55:57,577 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:59,600 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:55:59,848 DEBUG   SenderThread:23580 [sender.py:send():379] send: stats
+2024-05-16 23:56:00,550 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:56:00,550 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:56:00,612 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:56:01,086 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:01,626 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:03,644 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:05,697 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:06,087 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:07,754 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:09,768 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:11,089 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:11,799 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:13,840 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:15,554 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:56:15,558 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:56:15,615 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:56:15,864 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:16,122 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:17,909 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:19,934 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:21,144 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:21,998 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:24,060 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:26,109 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:26,176 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:28,152 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:29,856 DEBUG   SenderThread:23580 [sender.py:send():379] send: stats
+2024-05-16 23:56:30,176 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:30,563 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:56:30,563 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:56:30,610 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:56:31,199 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:32,289 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:34,310 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:36,208 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:36,338 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:38,359 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:40,395 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:41,208 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:42,426 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:44,456 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:45,560 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-16 23:56:45,561 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: stop_status
+2024-05-16 23:56:45,622 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:56:46,273 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:46,566 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:48,590 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:50,612 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:51,278 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:52,643 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:53,174 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-16 23:56:53,176 DEBUG   SenderThread:23580 [sender.py:send():379] send: history
+2024-05-16 23:56:53,178 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: summary_record
+2024-05-16 23:56:53,180 INFO    SenderThread:23580 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-16 23:56:53,188 DEBUG   SenderThread:23580 [sender.py:send():379] send: exit
+2024-05-16 23:56:53,188 INFO    SenderThread:23580 [sender.py:send_exit():586] handling exit code: 1
+2024-05-16 23:56:53,188 INFO    SenderThread:23580 [sender.py:send_exit():588] handling runtime: 233
+2024-05-16 23:56:53,189 INFO    SenderThread:23580 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-16 23:56:53,190 INFO    SenderThread:23580 [sender.py:send_exit():594] send defer
+2024-05-16 23:56:53,191 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:53,191 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 0
+2024-05-16 23:56:53,191 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:53,192 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-05-16 23:56:53,192 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 1
+2024-05-16 23:56:53,192 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:53,192 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 1
+2024-05-16 23:56:53,193 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:53,193 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-05-16 23:56:53,193 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 2
+2024-05-16 23:56:53,193 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:53,193 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 2
+2024-05-16 23:56:53,193 INFO    HandlerThread:23580 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-16 23:56:53,193 DEBUG   SystemMonitor:23580 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-16 23:56:53,193 INFO    HandlerThread:23580 [interfaces.py:finish():202] Joined cpu monitor
+2024-05-16 23:56:53,203 DEBUG   SystemMonitor:23580 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-16 23:56:53,204 INFO    HandlerThread:23580 [interfaces.py:finish():202] Joined disk monitor
+2024-05-16 23:56:53,285 INFO    HandlerThread:23580 [interfaces.py:finish():202] Joined gpu monitor
+2024-05-16 23:56:53,285 INFO    HandlerThread:23580 [interfaces.py:finish():202] Joined memory monitor
+2024-05-16 23:56:53,286 INFO    HandlerThread:23580 [interfaces.py:finish():202] Joined network monitor
+2024-05-16 23:56:53,287 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:53,287 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-05-16 23:56:53,287 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 3
+2024-05-16 23:56:53,288 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:53,288 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 3
+2024-05-16 23:56:53,288 DEBUG   SenderThread:23580 [sender.py:send():379] send: stats
+2024-05-16 23:56:53,289 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:53,289 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-05-16 23:56:53,289 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 4
+2024-05-16 23:56:53,289 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:53,289 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 4
+2024-05-16 23:56:53,290 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:53,290 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-05-16 23:56:53,290 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 5
+2024-05-16 23:56:53,290 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:53,290 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 5
+2024-05-16 23:56:53,291 DEBUG   SenderThread:23580 [sender.py:send():379] send: summary
+2024-05-16 23:56:53,292 INFO    SenderThread:23580 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-16 23:56:53,292 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:53,292 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-05-16 23:56:53,292 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 6
+2024-05-16 23:56:53,292 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:53,292 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 6
+2024-05-16 23:56:53,293 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:53,293 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-05-16 23:56:53,293 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 7
+2024-05-16 23:56:53,293 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: status_report
+2024-05-16 23:56:53,293 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:53,293 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 7
+2024-05-16 23:56:53,294 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:53,294 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-05-16 23:56:53,653 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\wandb-summary.json
+2024-05-16 23:56:54,197 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-16 23:56:54,666 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:56,036 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 8
+2024-05-16 23:56:56,036 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: poll_exit
+2024-05-16 23:56:56,036 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:56,036 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 8
+2024-05-16 23:56:56,036 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:56,036 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-05-16 23:56:56,037 INFO    SenderThread:23580 [job_builder.py:build():318] Attempting to build job artifact
+2024-05-16 23:56:56,037 INFO    SenderThread:23580 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-05-16 23:56:56,136 INFO    SenderThread:23580 [job_builder.py:build():431] adding wandb-job metadata file
+2024-05-16 23:56:56,143 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 9
+2024-05-16 23:56:56,144 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:56,144 DEBUG   SenderThread:23580 [sender.py:send():379] send: artifact
+2024-05-16 23:56:56,144 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 9
+2024-05-16 23:56:56,225 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-16 23:56:56,680 INFO    Thread-16 :23580 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:56,902 INFO    SenderThread:23580 [sender.py:send_artifact():1468] sent artifact job-https___github.com_Arnou-van-Elk_SlowFastLocalisation18.git_SlowFastResNet18_ResNet18_Final-main_train_resnet_slowfast.py - {'id': 'QXJ0aWZhY3Q6ODMzNTAyODc3', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE3Mzg0NzM5NQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODM5MDQ0NjE2', 'versionIndex': 2}}}
+2024-05-16 23:56:56,903 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:56,903 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-05-16 23:56:56,903 INFO    SenderThread:23580 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-16 23:56:57,686 INFO    SenderThread:23580 [dir_watcher.py:finish():388] scan: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files
+2024-05-16 23:56:57,686 INFO    SenderThread:23580 [dir_watcher.py:finish():402] scan save: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\conda-environment.yaml conda-environment.yaml
+2024-05-16 23:56:57,687 INFO    SenderThread:23580 [dir_watcher.py:finish():402] scan save: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\config.yaml config.yaml
+2024-05-16 23:56:57,687 INFO    SenderThread:23580 [dir_watcher.py:finish():402] scan save: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log output.log
+2024-05-16 23:56:57,689 INFO    SenderThread:23580 [dir_watcher.py:finish():402] scan save: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\requirements.txt requirements.txt
+2024-05-16 23:56:57,692 INFO    SenderThread:23580 [dir_watcher.py:finish():402] scan save: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\wandb-metadata.json wandb-metadata.json
+2024-05-16 23:56:57,692 INFO    SenderThread:23580 [dir_watcher.py:finish():402] scan save: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\wandb-summary.json wandb-summary.json
+2024-05-16 23:56:57,693 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 10
+2024-05-16 23:56:57,693 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: poll_exit
+2024-05-16 23:56:57,695 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:57,695 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 10
+2024-05-16 23:56:57,697 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:57,698 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-05-16 23:56:57,698 INFO    SenderThread:23580 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-16 23:56:58,069 INFO    wandb-upload_0:23580 [upload_job.py:push():131] Uploaded file C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\config.yaml
+2024-05-16 23:56:58,250 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-16 23:56:58,250 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: poll_exit
+2024-05-16 23:56:58,735 INFO    wandb-upload_2:23580 [upload_job.py:push():131] Uploaded file C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\requirements.txt
+2024-05-16 23:56:59,249 INFO    wandb-upload_3:23580 [upload_job.py:push():131] Uploaded file C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\wandb-summary.json
+2024-05-16 23:56:59,258 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-16 23:56:59,259 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: poll_exit
+2024-05-16 23:56:59,702 INFO    wandb-upload_1:23580 [upload_job.py:push():131] Uploaded file C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\files\output.log
+2024-05-16 23:56:59,914 INFO    Thread-15 :23580 [sender.py:transition_state():614] send defer: 11
+2024-05-16 23:56:59,914 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:59,914 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 11
+2024-05-16 23:56:59,915 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:59,915 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-05-16 23:56:59,915 INFO    SenderThread:23580 [file_pusher.py:join():178] waiting for file pusher
+2024-05-16 23:56:59,915 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 12
+2024-05-16 23:56:59,916 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:56:59,916 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 12
+2024-05-16 23:56:59,916 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:56:59,916 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-05-16 23:56:59,916 INFO    SenderThread:23580 [file_stream.py:finish():614] file stream finish called
+2024-05-16 23:57:00,057 INFO    SenderThread:23580 [file_stream.py:finish():618] file stream finish is done
+2024-05-16 23:57:00,058 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 13
+2024-05-16 23:57:00,058 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:57:00,058 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 13
+2024-05-16 23:57:00,058 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:57:00,058 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-05-16 23:57:00,058 INFO    SenderThread:23580 [sender.py:transition_state():614] send defer: 14
+2024-05-16 23:57:00,059 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: defer
+2024-05-16 23:57:00,059 INFO    HandlerThread:23580 [handler.py:handle_request_defer():172] handle defer: 14
+2024-05-16 23:57:00,059 DEBUG   SenderThread:23580 [sender.py:send():379] send: final
+2024-05-16 23:57:00,059 DEBUG   SenderThread:23580 [sender.py:send():379] send: footer
+2024-05-16 23:57:00,059 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: defer
+2024-05-16 23:57:00,060 INFO    SenderThread:23580 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-05-16 23:57:00,060 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-16 23:57:00,061 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-16 23:57:00,061 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: server_info
+2024-05-16 23:57:00,061 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: poll_exit
+2024-05-16 23:57:00,061 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: get_summary
+2024-05-16 23:57:00,061 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: poll_exit
+2024-05-16 23:57:00,061 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: sampled_history
+2024-05-16 23:57:00,062 DEBUG   SenderThread:23580 [sender.py:send_request():406] send_request: server_info
+2024-05-16 23:57:00,062 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-16 23:57:00,193 INFO    MainThread:23580 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-05-16 23:57:00,193 INFO    MainThread:23580 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-05-16 23:57:00,195 INFO    MainThread:23580 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-05-16 23:57:00,196 DEBUG   HandlerThread:23580 [handler.py:handle_request():146] handle_request: shutdown
+2024-05-16 23:57:00,196 INFO    HandlerThread:23580 [handler.py:finish():866] shutting down handler
+2024-05-16 23:57:01,061 INFO    WriterThread:23580 [datastore.py:close():296] close: C:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\wandb\run-20240516_235258-he9skdv4\run-he9skdv4.wandb
+2024-05-16 23:57:01,200 INFO    SenderThread:23580 [sender.py:finish():1546] shutting down sender
+2024-05-16 23:57:01,200 INFO    SenderThread:23580 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-16 23:57:01,200 INFO    SenderThread:23580 [file_pusher.py:join():178] waiting for file pusher

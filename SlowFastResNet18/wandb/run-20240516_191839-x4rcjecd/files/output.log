@@ -1,0 +1,23 @@
+
+  0%|                                                                                                                                      | 0/1425 [00:00<?, ?it/s]
+[INFO]: Epoch 1 of 50
+
+  2%|██▏                                                                                                                          | 25/1425 [00:04<04:11,  5.57it/s]
+Traceback (most recent call last):
+  File "c:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\ResNet18_Final-main\train_resnet_slowfast.py", line 105, in <module>
+    train_epoch_loss, train_epoch_acc, keys_train = train(
+  File "c:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\ResNet18_Final-main\training_utils_resnet_slowfast.py", line 14, in train
+    for i, data in tqdm(enumerate(trainloader), total=len(trainloader)):
+  File "C:\Users\arnou\Anaconda\lib\site-packages\tqdm\std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "C:\Users\arnou\Anaconda\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "C:\Users\arnou\Anaconda\lib\site-packages\torch\utils\data\dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\arnou\Anaconda\lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\arnou\Anaconda\lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "c:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\ResNet18_Final-main\utils_resnet_slowfast.py", line 23, in __getitem__
+    data = np.load(file_path)['arr_0'].astype(np.float32)
+KeyboardInterrupt

@@ -6,6 +6,39 @@ from typing import Type # this is for type checking which is relevant when
                         # building complex architectures
     
 
+_MODEL_STAGE_DEPTH = {18: (2, 2, 2,2)}
+
+# Check if seperate kern basises of slow and fast are needed.
+_TEMPORAL_KERNEL_BASIS = {
+    "slow": [
+        [[1]],  # conv1 temporal kernel.
+        [[1]],  # res2 temporal kernel.
+        [[1]],  # res3 temporal kernel.
+        [[3]],  # res4 temporal kernel.
+        [[3]],  # res5 temporal kernel.
+    ],
+    "fast": [
+        [[5]],  # conv1 temporal kernel.
+        [[3]],  # res2 temporal kernel.
+        [[3]],  # res3 temporal kernel.
+        [[3]],  # res4 temporal kernel.
+        [[3]],  # res5 temporal kernel.
+    ],
+    "slowfast": [
+        [[1], [5]],  # conv1 temporal kernel for slow and fast pathway.
+        [[1], [3]],  # res2 temporal kernel for slow and fast pathway.
+        [[1], [3]],  # res3 temporal kernel for slow and fast pathway.
+        [[3], [3]],  # res4 temporal kernel for slow and fast pathway.
+        [[3], [3]],  # res5 temporal kernel for slow and fast pathway.
+    ],
+}
+
+# Check if seperate pools for slow and fast are needed
+_POOL1 = {
+    "slow": [[1, 1]],
+    "fast": [[1, 1]],
+    "slowfast": [[1, 1], [1, 1]],
+}
 
 # define a Python class for the Basic blocks
 class BasicBlock(nn.Module):
@@ -26,9 +59,11 @@ class BasicBlock(nn.Module):
             in_channels, 
             out_channels, 
             kernel_size=3, 
-            stride=stride, 
+            stride=stride, # Compare stride sizes to those of OG slowfast model
             padding=1,
             bias=False
+            # Add frequency dilation -> work throuhg ResNetHelper.ResStage
+            # Transformation function 
         )
         self.bn1 = nn.BatchNorm2d(out_channels)
         self.relu = nn.ReLU(inplace=True)

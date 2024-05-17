@@ -1,0 +1,89 @@
+
+  0%|                                                                                                                              | 1/1425 [00:01<35:05,  1.48s/it]
+[INFO]: Epoch 1 of 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏| 1416/1425 [02:36<00:01,  8.35it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1425/1425 [02:37<00:00,  9.05it/s]
+  0%|                                                                                                                                       | 0/357 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "c:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\ResNet18_Final-main\train_resnet_slowfast.py", line 113, in <module>
+    epoch_loss, epoch_acc, all_preds, all_labels = validate(
+  File "c:\Users\arnou\OneDrive\Documents\GitHub\SlowFastLocalisation18\SlowFastResNet18\ResNet18_Final-main\training_utils_resnet_slowfast.py", line 102, in validate
+    labels = labels.to(device)
+AttributeError: 'tuple' object has no attribute 'to'

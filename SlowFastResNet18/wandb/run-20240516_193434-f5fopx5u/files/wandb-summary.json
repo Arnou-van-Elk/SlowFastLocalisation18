@@ -1,0 +1,1 @@
+{"lr_after": 0.0002, "_timestamp": 1715881583.836846, "_runtime": 709.7168991565704, "_step": 7, "Epoch": 3, "Train Loss": 3.3801384755184776, "Train Acc": 6.741228070175438, "Valid Loss": 3.3536217573310148, "Valid Acc": 7.324561403508772, "_wandb": {"runtime": 758}}
