@@ -6,7 +6,7 @@ import numpy as np
 import wandb
 import pickle
 
-from resnet18_slowfast import ResNet, BasicBlock
+from resnet18_slowfast import SlowFastResNet18, BasicBlock
 from utils_resnet_slowfast import Dataset
 from training_utils_resnet_slowfast import train, validate
 
@@ -46,7 +46,7 @@ partition = {'train': [file_IDs[i] for i in indices_train], 'validation': [file_
 
 # Initialize WandB
 wandb.init(project="Thesis")
-wandb.run.name = 'Confusion_test'
+wandb.run.name = 'First_Try_SlowFast_18'
 
 # CUDA for PyTorch
 use_cuda = torch.cuda.is_available()
@@ -57,7 +57,7 @@ torch.backends.cudnn.benchmark = True
 # Define learning and training parameters.
 batsize = 32 # OG 32
 learning_rate = 0.0002 # OG 0.0002
-max_epochs = 1 # OG 50
+max_epochs = 50 # OG 50
 nr_channels = 2
 nr_classes = 114 # The amount of possible locations
 # Each class is a combination of each AzPos and ElPos value
@@ -134,25 +134,25 @@ if __name__ == '__main__':
           "Train Acc": train_epoch_acc,
           "Valid Loss": valid_epoch_loss,
           "Valid Acc": valid_epoch_acc})
-        matrix_keys.append(final_keys)
-        matrix_labels.append(final_label)
-        matrix_preds.append(final_preds)
+    matrix_keys.append(final_keys)
+    matrix_labels.append(final_label)
+    matrix_preds.append(final_preds)
     print('TRAINING COMPLETE')
-    print('MATRIX STUFF THINGIES TESTING KEYS:', matrix_keys, "LABELS", matrix_labels, "PREDS", matrix_preds)
+    #print('MATRIX STUFF THINGIES TESTING KEYS:', matrix_keys, "LABELS", matrix_labels, "PREDS", matrix_preds)
 
-    with open(os.path.join(filepath,'keys_conf.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'keys_conf_slowfast.pkl'), 'wb') as fp:
         pickle.dump(matrix_keys, fp)
         print('keysss saved successfully to file')
     
-    with open(os.path.join(filepath,'labels_conf.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'labels_conf_slowfast.pkl'), 'wb') as fp:
         pickle.dump(matrix_labels, fp)
         print('labelsss saved successfully to file')
 
-    with open(os.path.join(filepath,'preds_conf.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'preds_conf_slowfast.pkl'), 'wb') as fp:
         pickle.dump(matrix_preds, fp)
         print('predsss saved successfully to file')
 
-    with open(os.path.join(filepath,'extra_label.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'extra_label_slowfast.pkl'), 'wb') as fp:
         pickle.dump(extra_label_thing, fp)
         print('extrasss saved successfully to file')
 
