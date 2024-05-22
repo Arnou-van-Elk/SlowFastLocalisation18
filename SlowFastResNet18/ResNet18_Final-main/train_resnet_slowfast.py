@@ -6,7 +6,7 @@ import numpy as np
 import wandb
 import pickle
 
-from resnet18_slowfast import SlowFastResNet18, BasicBlock
+from resnet18_slowfast import ResNet, BasicBlock
 from utils_resnet_slowfast import Dataset
 from training_utils_resnet_slowfast import train, validate
 
@@ -46,7 +46,7 @@ partition = {'train': [file_IDs[i] for i in indices_train], 'validation': [file_
 
 # Initialize WandB
 wandb.init(project="Thesis")
-wandb.run.name = 'First_Try_SlowFast_18'
+wandb.run.name = 'First_Try_SlowFast_34'
 
 # CUDA for PyTorch
 use_cuda = torch.cuda.is_available()
@@ -86,7 +86,7 @@ validation_set = Dataset(partition['validation'], labels_val, filepath)
 validation_generator = torch.utils.data.DataLoader(validation_set, **params_val)
 
 # Model
-model = ResNet(img_channels=nr_channels, num_layers=18, block=BasicBlock, num_classes=nr_classes).to(device)
+model = ResNet(img_channels=nr_channels, num_layers=34, block=BasicBlock, num_classes=nr_classes).to(device)
 
 # Optimizer and scheduler
 optimizer = optim.SGD(model.parameters(), lr=learning_rate)
@@ -140,21 +140,21 @@ if __name__ == '__main__':
     print('TRAINING COMPLETE')
     #print('MATRIX STUFF THINGIES TESTING KEYS:', matrix_keys, "LABELS", matrix_labels, "PREDS", matrix_preds)
 
-    with open(os.path.join(filepath,'keys_conf_slowfast.pkl'), 'wb') as fp:
-        pickle.dump(matrix_keys, fp)
-        print('keysss saved successfully to file')
+    # with open(os.path.join(filepath,'keys_conf_slowfast.pkl'), 'wb') as fp:
+    #     pickle.dump(matrix_keys, fp)
+    #     print('keysss saved successfully to file')
     
-    with open(os.path.join(filepath,'labels_conf_slowfast.pkl'), 'wb') as fp:
-        pickle.dump(matrix_labels, fp)
-        print('labelsss saved successfully to file')
+    # with open(os.path.join(filepath,'labels_conf_slowfast.pkl'), 'wb') as fp:
+    #     pickle.dump(matrix_labels, fp)
+    #     print('labelsss saved successfully to file')
 
-    with open(os.path.join(filepath,'preds_conf_slowfast.pkl'), 'wb') as fp:
-        pickle.dump(matrix_preds, fp)
-        print('predsss saved successfully to file')
+    # with open(os.path.join(filepath,'preds_conf_slowfast.pkl'), 'wb') as fp:
+    #     pickle.dump(matrix_preds, fp)
+    #     print('predsss saved successfully to file')
 
-    with open(os.path.join(filepath,'extra_label_slowfast.pkl'), 'wb') as fp:
-        pickle.dump(extra_label_thing, fp)
-        print('extrasss saved successfully to file')
+    # with open(os.path.join(filepath,'extra_label_slowfast.pkl'), 'wb') as fp:
+    #     pickle.dump(extra_label_thing, fp)
+    #     print('extrasss saved successfully to file')
 
     # save key-value dictionary for evaluation on independent dataset
     with open(os.path.join(filepath,'labels_after_training_conf.pkl'), 'wb') as fp:
