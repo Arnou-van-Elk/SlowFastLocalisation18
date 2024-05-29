@@ -5,8 +5,8 @@ import os
 import numpy as np
 import wandb
 import pickle
+from torchvision import models  # Import torchvision models
 
-from resnet34_base import ResNet, BasicBlock
 from utils_resnet_slowfast import Dataset
 from training_utils_resnet_slowfast import train, validate
 
@@ -23,13 +23,9 @@ labels = [f[-23:] for f in os.listdir(filepath) if f.endswith('.npz')]
 classes = set(labels)
 indices_dict = {class_: [i for i, label in enumerate(labels) if label == class_] for class_ in classes}
 
-# Check to see if the classes are named correctly
-#print(classes)
-
 # Some number to indicate the test and validation splits
 num_train = 400
 num_val = 100
-
 
 indices_train, indices_val = [], []
 
@@ -43,7 +39,6 @@ labels_train = {file_IDs[i]: labels[i] for i in indices_train}
 labels_val = {file_IDs[i]: labels[i] for i in indices_val}
 partition = {'train': [file_IDs[i] for i in indices_train], 'validation': [file_IDs[i] for i in indices_val]}
 
-
 # Initialize WandB
 wandb.init(project="Thesis")
 wandb.run.name = 'Baseline_34'
@@ -53,23 +48,19 @@ use_cuda = torch.cuda.is_available()
 device = torch.device("cuda:0" if use_cuda else "cpu")
 torch.backends.cudnn.benchmark = True
 
-# Deze run opnieuw starten!!
 # Define learning and training parameters.
-batsize = 32 # OG 32
-learning_rate = 0.0002 # OG 0.0002
-max_epochs = 50 # OG 50
+batsize = 32
+learning_rate = 0.0002
+max_epochs = 50
 nr_channels = 2
-nr_classes = 114 # The amount of possible locations
-# Each class is a combination of each AzPos and ElPos value
-
+nr_classes = 114  # The amount of possible locations
 
 # track hyperparameters and run metadata
-
 wandb.config = {
     "learning_rate": learning_rate,
     "batch_size": batsize,
     "classes": nr_classes,
-    "architecture": "SlowFast_ResNet-34",
+    "architecture": "ResNet-34",
     "dataset": "LogMelSpectograms",
     "epochs": max_epochs,
 }
@@ -86,7 +77,10 @@ validation_set = Dataset(partition['validation'], labels_val, filepath)
 validation_generator = torch.utils.data.DataLoader(validation_set, **params_val)
 
 # Model
-model = ResNet(img_channels=nr_channels, num_layers=34, block=BasicBlock, num_classes=nr_classes).to(device)
+model = models.resnet34(weights=False)  # Use torchvision's ResNet34
+model.conv1 = nn.Conv2d(2, 64, kernel_size=7, stride=2, padding=3, bias=False)  # Adjust the first conv layer to accept 2 channels
+model.fc = nn.Linear(model.fc.in_features, nr_classes)  # Adjust the fully connected layer
+model = model.to(device)
 
 # Optimizer and scheduler
 optimizer = optim.SGD(model.parameters(), lr=learning_rate)
@@ -114,12 +108,14 @@ if __name__ == '__main__':
             criterion,
             device
         )
+
         valid_epoch_loss, valid_epoch_acc, keys, final_label, final_preds, final_keys, extra_label_thing = validate(
             model, 
             validation_generator, 
             criterion,
             device
         )
+
         train_loss.append(train_epoch_loss)
         valid_loss.append(valid_epoch_loss)
         train_acc.append(train_epoch_acc)
@@ -134,16 +130,16 @@ if __name__ == '__main__':
           "Train Acc": train_epoch_acc,
           "Valid Loss": valid_epoch_loss,
           "Valid Acc": valid_epoch_acc})
+
     matrix_keys.append(final_keys)
     matrix_labels.append(final_label)
     matrix_preds.append(final_preds)
     print('TRAINING COMPLETE')
-    #print('MATRIX STUFF THINGIES TESTING KEYS:', matrix_keys, "LABELS", matrix_labels, "PREDS", matrix_preds)
 
     with open(os.path.join(filepath,'keys_conf_slowfast_34.pkl'), 'wb') as fp:
         pickle.dump(matrix_keys, fp)
         print('keysss saved successfully to file')
-    
+
     with open(os.path.join(filepath,'labels_conf_slowfast_34.pkl'), 'wb') as fp:
         pickle.dump(matrix_labels, fp)
         print('labelsss saved successfully to file')
