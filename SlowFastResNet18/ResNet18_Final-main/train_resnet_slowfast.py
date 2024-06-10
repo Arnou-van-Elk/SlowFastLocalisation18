@@ -6,7 +6,7 @@ import numpy as np
 import wandb
 import pickle
 
-from resnet34_base import ResNet, BasicBlock
+from Bases.resnet34_fast_channelcap import ResNet, BasicBlock 
 from utils_resnet_slowfast import Dataset
 from training_utils_resnet_slowfast import train, validate
 
@@ -46,7 +46,7 @@ partition = {'train': [file_IDs[i] for i in indices_train], 'validation': [file_
 
 # Initialize WandB
 wandb.init(project="Thesis")
-wandb.run.name = 'Baseline_34'
+wandb.run.name = 'Fast_34_lr0.002'
 
 # CUDA for PyTorch
 use_cuda = torch.cuda.is_available()
@@ -56,7 +56,7 @@ torch.backends.cudnn.benchmark = True
 # Deze run opnieuw starten!!
 # Define learning and training parameters.
 batsize = 32 # OG 32
-learning_rate = 0.0002 # OG 0.0002
+learning_rate = 0.002 # OG 0.0002
 max_epochs = 50 # OG 50
 nr_channels = 2
 nr_classes = 114 # The amount of possible locations
@@ -69,7 +69,7 @@ wandb.config = {
     "learning_rate": learning_rate,
     "batch_size": batsize,
     "classes": nr_classes,
-    "architecture": "SlowFast_ResNet-34",
+    "architecture": "ResNet34_Fast",
     "dataset": "LogMelSpectograms",
     "epochs": max_epochs,
 }
@@ -134,32 +134,33 @@ if __name__ == '__main__':
           "Train Acc": train_epoch_acc,
           "Valid Loss": valid_epoch_loss,
           "Valid Acc": valid_epoch_acc})
+    print('TRAINING COMPLETE')
     matrix_keys.append(final_keys)
     matrix_labels.append(final_label)
     matrix_preds.append(final_preds)
-    print('TRAINING COMPLETE')
-    #print('MATRIX STUFF THINGIES TESTING KEYS:', matrix_keys, "LABELS", matrix_labels, "PREDS", matrix_preds)
+     
+#     #print('MATRIX STUFF THINGIES TESTING KEYS:', matrix_keys, "LABELS", matrix_labels, "PREDS", matrix_preds)
 
-    with open(os.path.join(filepath,'keys_conf_slowfast_34.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'keys_conf_fast_34_lr.pkl'), 'wb') as fp:
         pickle.dump(matrix_keys, fp)
         print('keysss saved successfully to file')
     
-    with open(os.path.join(filepath,'labels_conf_slowfast_34.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'labels_conf_fast_34_lr.pkl'), 'wb') as fp:
         pickle.dump(matrix_labels, fp)
         print('labelsss saved successfully to file')
 
-    with open(os.path.join(filepath,'preds_conf_slowfast_34.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'preds_conf_fast_34_lr.pkl'), 'wb') as fp:
         pickle.dump(matrix_preds, fp)
         print('predsss saved successfully to file')
 
-    with open(os.path.join(filepath,'extra_label_slowfast_34.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'extra_label_fast_34_lr.pkl'), 'wb') as fp:
         pickle.dump(extra_label_thing, fp)
         print('extrasss saved successfully to file')
 
     # save key-value dictionary for evaluation on independent dataset
-    with open(os.path.join(filepath,'labels_after_training_conf.pkl'), 'wb') as fp:
+    with open(os.path.join(filepath,'labels_after_training_fast_lr.pkl'), 'wb') as fp:
         pickle.dump(keys_train, fp)
         print('dictionary saved successfully to file')
 
 # save model weights after training
-torch.save(model.state_dict(), os.path.join(filepath,'trained_model_twochannel_50epochs_34.pt'))
+torch.save(model.state_dict(), os.path.join(filepath,'trained_fast_twochannel_50epochs_34_lr.pt'))

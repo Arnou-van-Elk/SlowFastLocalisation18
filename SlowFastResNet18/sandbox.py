@@ -24,7 +24,7 @@ if files:
         # Retrieve the log Mel spectrogram
         log_mel_spectrogram = data[key]
 
-        # Optionally, print the key and the shape of the log Mel spectrogram
+        # print the key and the shape of the log Mel spectrogram
         print(f"File: {file}")
         print(f"Key: {key}")
         print(f"Shape of the Log Mel Spectrogram: {log_mel_spectrogram.shape}")

@@ -10,3 +10,6 @@ SlowFastResNet18/ResNet18_Final-main/OG_slowfast.py
 /SlowFastResNet18/ResNet18_Final-main/Old_versions
 SlowFastResNet18/ResNet18_Final-main/sandbox.py
 /SlowFastResNet18/ResNet18_Final-main/wandb
+/SlowFastResNet18/LogMelSpectrograms_TestSet
+/SlowFastResNet18/ResNet18_Final-main/__pycache__
+/SlowFastResNet18/ResNet18_Final-main/misc_code

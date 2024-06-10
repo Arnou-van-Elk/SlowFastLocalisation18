@@ -8,15 +8,15 @@ import re
 
 
 def extract_azpos(text):
-    # Regex pattern to optionally match an underscore, but always capture 'AzPos_' followed by any digits
-    pattern = r'_?(AzPos_\d+)'
-    
+    # Regex pattern to capture digits immediately following 'AzPos_'
+    pattern = r'AzPos_(\d+)'
+
     # Search for the pattern in the text
     match = re.search(pattern, text)
-    
-    # If a match is found, return the matched text without the underscore
+
+    # If a match is found, return the captured digits
     if match:
-        return match.group(1)  # group(1) refers to the first captured group which is 'AzPos_xxx'
+        return match.group(1)  # group(1) refers to the first captured group which is the digits after 'AzPos_'
     else:
         return None
 
@@ -34,14 +34,14 @@ def gen_tuple_list(keys_file, labels_file, preds_file):
 
     categories = ['ElPos_000', 'ElPos_20', 'ElPos_45', 'ElPos_60', 'ElPos_-20', 'ElPos_-45']
     category_lists = {key: [] for key in categories}
+    
+    for j in range(len(labels_list[0])-2):
+        for i in range(len(labels_list[0][j])-1):
+            truth = labels_list[0][j][i].item()
+            predicted = preds_list[0][j][i].item()
 
-    for j in range(len(labels_list[49])-2):
-        for i in range(len(labels_list[49][j])-1):
-            truth = labels_list[49][j][i].item()
-            predicted = preds_list[49][j][i].item()
-
-            values_list = list(keys_list[49][j].values())
-            keys_list_j = list(keys_list[49][j].keys())
+            values_list = list(keys_list[0][j].values())
+            keys_list_j = list(keys_list[0][j].keys())
 
             if predicted < len(values_list) and truth < len(values_list):
                 predicted_label = keys_list_j[values_list[predicted]]
@@ -53,6 +53,7 @@ def gen_tuple_list(keys_file, labels_file, preds_file):
                         break
 
     return tuple(category_lists[cat] for cat in categories)
+
 
 def create_confusion_matrix(label_pairs, matrix_name):
     """
@@ -70,8 +71,8 @@ def create_confusion_matrix(label_pairs, matrix_name):
     true_labels = [pair[1] for pair in label_pairs]
 
     # Define custom order for labels
-    custom_order = ['AzPos_270', 'AzPos_280', 'AzPos_290', 'AzPos_300', 'AzPos_310', 'AzPos_320', 'AzPos_330', 'AzPos_340', 'AzPos_350',
-                    'AzPos_000', 'AzPos_010', 'AzPos_020', 'AzPos_030', 'AzPos_040', 'AzPos_050', 'AzPos_060', 'AzPos_070', 'AzPos_080', 'AzPos_090']
+    custom_order = ['270', '280', '290', '300', '310', '320', '330', '340', '350',
+                    '000', '010', '020', '030', '040', '050', '060', '070', '080', '090']
 
     # Generate the confusion matrix
     cm = confusion_matrix(true_labels, predicted_labels, labels=custom_order)
@@ -86,7 +87,7 @@ def create_confusion_matrix(label_pairs, matrix_name):
         col_sum = np.sum(cm_percentage[:, i])
         correction_factor = 100 / col_sum
         cm_percentage[:, i] *= correction_factor
-        cm_percentage[:, i] = np.round(cm_percentage[:, i], 2)  # Round to two decimal places
+        cm_percentage[:, i] = np.round(cm_percentage[:, i], 0)  # Round to full integers
 
         # Correct any minor discrepancies caused by rounding
         correction = 100 - np.sum(cm_percentage[:, i])
@@ -95,7 +96,7 @@ def create_confusion_matrix(label_pairs, matrix_name):
 
     # Plotting the confusion matrix
     plt.figure(figsize=(10, 7))
-    sns.heatmap(cm_percentage, annot=True, fmt=".2f", cmap='Blues', xticklabels=custom_order, yticklabels=custom_order)
+    sns.heatmap(cm_percentage, annot=True, cmap='Blues', xticklabels=custom_order, yticklabels=custom_order, vmin=0, vmax=100)
     plt.xlabel('True Labels')
     plt.ylabel('Predicted Labels')
     plt.title(matrix_name)
@@ -105,25 +106,18 @@ def create_confusion_matrix(label_pairs, matrix_name):
 
 
 filepath = r'C:\Users\arnou\Documents\Radboud\Thesis\slowfast18\LogMelSpectrograms\LogMelSpectrograms'
-keys_file = os.path.join(filepath, 'keys_conf.pkl')
-labels_file = os.path.join(filepath, 'labels_conf.pkl')
-preds_file = os.path.join(filepath, 'preds_conf.pkl')
+keys_file = os.path.join(filepath, 'keys_conf_fast_34_lr.pkl')
+labels_file = os.path.join(filepath, 'labels_conf_fast_34_lr.pkl')
+preds_file = os.path.join(filepath, 'preds_conf_fast_34_lr.pkl')
 
 ElPos_000, ElPos_20, ElPos_45, ElPos_60, ElPos_min20, ElPos_min45 = gen_tuple_list(keys_file, labels_file, preds_file)
-# Averaged = []
-# Averaged.append(ElPos_000)
-# Averaged.append(ElPos_20)
-# Averaged.append(ElPos_45)
-# Averaged.append(ElPos_60)
-# Averaged.append(ElPos_min20)
-# Averaged.append(ElPos_min45)
-# Averaged_conf_matrix = create_confusion_matrix(Averaged, 'Averaged Confusion Matrix')
-# ElPos_000_conf = create_confusion_matrix(ElPos_000, 'Confusion Matrix for ElPos_000')
-# ElPos_20_conf = create_confusion_matrix(ElPos_20, 'Confusion Matrix for ElPos_20')
-# ElPos_45_conf = create_confusion_matrix(ElPos_45, 'Confusion Matrix for ElPos_45')
-# ElPos_60_conf = create_confusion_matrix(ElPos_60, 'Confusion Matrix for ElPos_60')
-# ElPos_min20_conf = create_confusion_matrix(ElPos_min20, 'Confusion Matrix for ElPos_-20')
-# ElPos_min45_conf = create_confusion_matrix(ElPos_min45, 'Confusion Matrix for ElPos_-45')
+
+ElPos_000_conf = create_confusion_matrix(ElPos_000, 'Fast stream confusion matrix for Elevation 000')
+ElPos_20_conf = create_confusion_matrix(ElPos_20, 'Fast stream confusion matrix for Elevation 20')
+ElPos_45_conf = create_confusion_matrix(ElPos_45, 'Fast stream confusion matrix for Elevation 45')
+ElPos_60_conf = create_confusion_matrix(ElPos_60, 'Fast stream confusion matrix for Elevation 60')
+ElPos_min20_conf = create_confusion_matrix(ElPos_min20, 'Fast stream confusion matrix for Elavation -20')
+ElPos_min45_conf = create_confusion_matrix(ElPos_min45, 'Fast stream confusion matrix for Elavation -45')
 
 
 
