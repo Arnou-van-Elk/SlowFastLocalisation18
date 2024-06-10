@@ -1,2 +1,2 @@
-# SlowFastLocalisation18
- Slow Fast auditory stream model for sound localisation in ResNet18
+# Slow and Fast ResNet34 auditory streams for sound localisation
+ Slow and Fast auditory stream models for sound localisation in ResNet34
