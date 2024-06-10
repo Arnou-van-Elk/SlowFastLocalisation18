@@ -14,7 +14,7 @@ from Bases.resnet34_slow_stride import ResNet, BasicBlock
 from utils_resnet_slowfast import Dataset
 from test_utils_resnet_slowfast import predict
 
-filepath = os.path.abspath(r'LogMelSpectrograms_TestSet\LogMelSpectrograms_TestSet')
+filepath = os.path.abspath(r'path\to\dataset')
 
 # Read npz files to create list of IDs
 file_IDs = [f.split('.')[0] for f in os.listdir(filepath) if f.endswith('.npz')]
@@ -32,10 +32,8 @@ labels = [f[-23:] for f in os.listdir(filepath) if f.endswith('.npz')]
 classes = set(labels)
 indices_dict = {class_: [i for i, label in enumerate(labels) if label == class_] for class_ in classes}
 
-# Check to see if class names are correct
-#print(classes)
 
-# Should be equal to number of test cases
+# Could be made obsolete
 num_test = 25
 
 # Split indices for training and validation
@@ -51,11 +49,7 @@ partition = {'test': [file_IDs[i] for i in indices_test]}
 # Read dictionary pkl file
 with open(os.path.join(filepath,filename_keypairs), 'rb') as fp:
     keys = pickle.load(fp)
-    # print(keys)
 
-# Check if they match
-# print("Sample keys from dictionary:", list(keys.keys())[:5])
-# print("Sample extracted labels:", labels[:5])
 
 # CUDA for PyTorch
 use_cuda = torch.cuda.is_available()
@@ -74,8 +68,6 @@ nr_classes     = 114
 test_set = Dataset(partition['test'], labels_test, filepath)
 test_generator = torch.utils.data.DataLoader(test_set,**params_test)
 
-criterion = nn.CrossEntropyLoss()
-
 
 # Initialise model
 model = ResNet(img_channels=nr_channels, num_layers=34, block=BasicBlock, num_classes=nr_classes).to(device)
@@ -85,24 +77,22 @@ model.load_state_dict(torch.load(os.path.join(filepath,filename_model)))
 # main execution block
 if __name__ == '__main__':
     # Perform prediction
-    test_loss, test_acc, keys, final_label, final_preds, final_keys, extra_label_thing = predict(
-            model, 
-            test_generator, 
-            criterion,
-            device
+    predictions, true_labels, keys = predict(
+        model, 
+        test_generator, 
+        device,
+        keys
         )
 
 # Calculate accuracy
-# evaluation_correct = (predictions == true_labels).sum().item()
-# accuracy_evaluation = evaluation_correct
-print(f"Test loss: {test_loss:.3f}, Test acc: {test_acc:.3f}")
-# print('evaluation on independent dataset complete, accuracy = ' + str(accuracy_evaluation) + '%')
-# print(true_labels)
-# check whether key-value pairs match training key-value pairs
-#print(keys)
+evaluation_correct = (predictions == true_labels).sum().item()
+accuracy_evaluation = evaluation_correct
+
+print('evaluation on independent dataset complete, accuracy = ' + str(accuracy_evaluation) + '%')
+
 
 # Save predictions and true labels for subsequent analysis
-# predictions = predictions.cpu() # bring back to cpu for numpy
-# true_labels = true_labels.cpu()
-# df = pd.DataFrame({'predictions':predictions.numpy(),'true_labels':true_labels.numpy()}) #convert to a dataframe
-# df.to_csv(os.path.join(filepath,filename_predictions), index={'Predictions','TrueLabels'}) #save to file
+predictions = predictions.cpu() # bring back to cpu for numpy
+true_labels = true_labels.cpu()
+df = pd.DataFrame({'predictions':predictions.numpy(),'true_labels':true_labels.numpy()}) #convert to a dataframe
+df.to_csv(os.path.join(filepath,filename_predictions), index={'Predictions','TrueLabels'}) #save to file

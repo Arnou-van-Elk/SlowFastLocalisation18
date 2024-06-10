@@ -11,7 +11,7 @@ from utils_resnet_slowfast import Dataset
 from training_utils_resnet_slowfast import train, validate
 
 # New filepath
-filepath = os.path.abspath(r'C:\Users\arnou\Documents\Radboud\Thesis\slowfast18\LogMelSpectrograms\LogMelSpectrograms')
+filepath = os.path.abspath(r'path\to\dataset')
 
 # Read LogMelspectograms files files to create list of IDs
 file_IDs = [f.split('.')[0] for f in os.listdir(filepath) if f.endswith('.npz')]
@@ -22,9 +22,6 @@ labels = [f[-23:] for f in os.listdir(filepath) if f.endswith('.npz')]
 # Categorize files based on labels
 classes = set(labels)
 indices_dict = {class_: [i for i, label in enumerate(labels) if label == class_] for class_ in classes}
-
-# Check to see if the classes are named correctly
-#print(classes)
 
 # Some number to indicate the test and validation splits
 num_train = 400
@@ -53,7 +50,7 @@ use_cuda = torch.cuda.is_available()
 device = torch.device("cuda:0" if use_cuda else "cpu")
 torch.backends.cudnn.benchmark = True
 
-# Deze run opnieuw starten!!
+
 # Define learning and training parameters.
 batsize = 32 # OG 32
 learning_rate = 0.002 # OG 0.0002
@@ -63,7 +60,7 @@ nr_classes = 114 # The amount of possible locations
 # Each class is a combination of each AzPos and ElPos value
 
 
-# track hyperparameters and run metadata
+# Track hyperparameters and run metadata
 
 wandb.config = {
     "learning_rate": learning_rate,
@@ -139,23 +136,23 @@ if __name__ == '__main__':
     matrix_labels.append(final_label)
     matrix_preds.append(final_preds)
      
-#     #print('MATRIX STUFF THINGIES TESTING KEYS:', matrix_keys, "LABELS", matrix_labels, "PREDS", matrix_preds)
 
-    with open(os.path.join(filepath,'keys_conf_fast_34_lr.pkl'), 'wb') as fp:
-        pickle.dump(matrix_keys, fp)
-        print('keysss saved successfully to file')
+# These files are used for the production of confusion matrices
+    # with open(os.path.join(filepath,'keys_conf_fast_34_lr.pkl'), 'wb') as fp:
+    #     pickle.dump(matrix_keys, fp)
+    #     print('keysss saved successfully to file')
     
-    with open(os.path.join(filepath,'labels_conf_fast_34_lr.pkl'), 'wb') as fp:
-        pickle.dump(matrix_labels, fp)
-        print('labelsss saved successfully to file')
+    # with open(os.path.join(filepath,'labels_conf_fast_34_lr.pkl'), 'wb') as fp:
+    #     pickle.dump(matrix_labels, fp)
+    #     print('labelsss saved successfully to file')
 
-    with open(os.path.join(filepath,'preds_conf_fast_34_lr.pkl'), 'wb') as fp:
-        pickle.dump(matrix_preds, fp)
-        print('predsss saved successfully to file')
+    # with open(os.path.join(filepath,'preds_conf_fast_34_lr.pkl'), 'wb') as fp:
+    #     pickle.dump(matrix_preds, fp)
+    #     print('predsss saved successfully to file')
 
-    with open(os.path.join(filepath,'extra_label_fast_34_lr.pkl'), 'wb') as fp:
-        pickle.dump(extra_label_thing, fp)
-        print('extrasss saved successfully to file')
+    # with open(os.path.join(filepath,'extra_label_fast_34_lr.pkl'), 'wb') as fp:
+    #     pickle.dump(extra_label_thing, fp)
+    #     print('extrasss saved successfully to file')
 
     # save key-value dictionary for evaluation on independent dataset
     with open(os.path.join(filepath,'labels_after_training_fast_lr.pkl'), 'wb') as fp:

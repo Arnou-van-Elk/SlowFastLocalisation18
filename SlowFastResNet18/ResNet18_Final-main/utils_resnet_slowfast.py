@@ -2,7 +2,7 @@ import torch
 import os
 import numpy as np
 
-# Adjusted version for SlowFast and LogMelSpectograms .npz files
+# Adjusted version for LogMelSpectograms .npz files
 class Dataset(torch.utils.data.Dataset):
     def __init__(self, list_IDs, labels, filepath):
         self.labels = labels

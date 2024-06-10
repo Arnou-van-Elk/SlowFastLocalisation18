@@ -1,7 +1,6 @@
 
 /wandb
 /SlowFastResNet18/wandb
-/SlowFastResNet18/ResNet18_Final-main/Bases
 /SlowFastResNet18/ResNet18_Final-main/__pycache__
 /SlowFastResNet18/ResNet18_Final-main/__pycache__
 /SlowFastResNet18/ResNet18_Final-main/__pycache__
@@ -13,3 +12,4 @@ SlowFastResNet18/ResNet18_Final-main/sandbox.py
 /SlowFastResNet18/LogMelSpectrograms_TestSet
 /SlowFastResNet18/ResNet18_Final-main/__pycache__
 /SlowFastResNet18/ResNet18_Final-main/misc_code
+/SlowFastResNet18/ResNet18_Final-main/Old_Bases
