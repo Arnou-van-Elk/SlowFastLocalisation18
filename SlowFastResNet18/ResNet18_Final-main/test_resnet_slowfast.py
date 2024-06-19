@@ -9,20 +9,20 @@ import pandas as pd
 import os  
 import pickle
 
-from Bases.resnet34_slow_stride import ResNet, BasicBlock
+from Bases.resnet34_fast_channelcap import ResNet, BasicBlock
 
 from utils_resnet_slowfast import Dataset
 from test_utils_resnet_slowfast import predict
 
-filepath = os.path.abspath(r'path\to\dataset')
+filepath = os.path.abspath(r'LogMelSpectrograms_TestSet\LogMelSpectrograms_TestSet')
 
 # Read npz files to create list of IDs
 file_IDs = [f.split('.')[0] for f in os.listdir(filepath) if f.endswith('.npz')]
 
 # Read file to create list of IDs 
-filename_keypairs = 'labels_after_training_slow.pkl'
-filename_model = 'trained_slow_twochannel_50epochs_34.pt' 
-filename_predictions = 'predictions_and_truelabels_slow.csv'
+filename_keypairs = 'labels_after_training_fast.pkl'
+filename_model = 'trained_fast_twochannel_50epochs_34.pt' 
+filename_predictions = 'predictions_and_truelabels_fast.csv'
 
 
 # Extract labels from filenames using the last 23 character, should be: AzPos_xxx_ElPos_xxx.npz
@@ -34,12 +34,12 @@ indices_dict = {class_: [i for i, label in enumerate(labels) if label == class_]
 
 
 # Could be made obsolete
-num_test = 25
+#num_test = 25
 
 # Split indices for training and validation
 indices_test= []
 for class_, indices in indices_dict.items():
-    indices_test.extend(indices[:num_test])
+    indices_test.extend(indices)
 
 # Create data and label splits
 labels_test = {file_IDs[i]: labels[i] for i in indices_test}
@@ -75,6 +75,8 @@ model = ResNet(img_channels=nr_channels, num_layers=34, block=BasicBlock, num_cl
 model.load_state_dict(torch.load(os.path.join(filepath,filename_model)))
 
 # main execution block
+print('keys',keys)
+print('test_gen', test_generator)
 if __name__ == '__main__':
     # Perform prediction
     predictions, true_labels, keys = predict(

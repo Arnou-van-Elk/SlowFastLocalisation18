@@ -21,5 +21,3 @@ def predict(model, test_generator, device, keys):
             _, preds = torch.max(predicted_outputs.data, 1)
             
         return preds, labels, keys
-
-
